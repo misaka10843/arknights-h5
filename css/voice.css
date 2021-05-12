@@ -1,0 +1,31 @@
+.into {
+    animation: into .5s ease-out both;
+}
+
+.inout {
+    animation: inout .5s ease-out both;
+}
+
+.hide {
+    visibility: hidden;
+}
+
+@keyframes into {
+    0% {
+        opacity: 0;
+    }
+
+    100% {
+        opacity: 1;
+    }
+}
+
+@keyframes inout {
+    0% {
+        opacity: 1;
+    }
+
+    100% {
+        opacity: 0;
+    }
+}

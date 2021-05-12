@@ -1,0 +1,359 @@
+<!DOCTYPE html>
+
+<html lang="zh">
+
+<head>
+	<meta charset="utf-8">
+
+	<title>Arknights</title>
+	<meta name="description" content="Arknights">
+	<meta name="author" content="Mashiro">
+
+	<meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0" name="viewport">
+
+	<!--[if lt IE 9]>
+	<script src="//cdn.jsdelivr.net/html5shiv/3.7.2/html5shiv.min.js"></script>
+	<script src="//cdnjs.cloudflare.com/ajax/libs/respond.js/1.4.2/respond.min.js"></script>
+	<![endif]-->
+
+	<link rel="stylesheet" href="css/normalize.css?v=1.0">
+	<link rel="stylesheet" href="css/styles.css?v=1.0">
+	<link href="./css/voice.css" rel="stylesheet" />
+	<script async src="https://s96.cnzz.com/z_stat.php?id=1277700683&web_id=1277700683"></script>
+	<!-- Global site tag (gtag.js) - Google Analytics -->
+	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100439904-7"></script>
+	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script>
+		window.dataLayer = window.dataLayer || [];
+
+		function gtag() {
+			dataLayer.push(arguments);
+		}
+		gtag('js', new Date());
+
+		gtag('config', 'UA-100439904-7');
+
+		function autoPlay() {
+            var myAuto = document.getElementById('yinxiao');
+            myAuto.play();
+			tipsshow();
+        }
+		function tipsshow(){
+			$('#errortips').removeClass("hide").addClass('show');
+		}
+		function tipshide(){
+			$('#errortips').removeClass("show").addClass('hide');
+			var myAuto = document.getElementById('yinxiao');
+            myAuto.play();
+		}
+		var i = 0;
+function voicecilck(){
+        if (i == 0){
+             $('#voice').removeClass("hide inout").addClass('into');
+            i = 1;
+			var myAuto = document.getElementById('yuyin');
+            myAuto.play();
+        }else{
+            setTimeout('update()',500);
+            i = 0;
+            $('#voice').removeClass("into hide").addClass('inout')
+        }
+        
+
+    }
+    function update(){
+        $('#voice').removeClass("inout into").addClass('hide')
+    }
+
+	</script>
+
+	<style>
+		/* loader */
+		.loader-layer {
+			background: #016d8d url(./img/loader.png) no-repeat center center fixed;
+			background-size: 100% 100% ;
+			position: fixed;
+			top: 0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			z-index: 999;
+		}
+
+		.loader-layer .tips {
+			font-family: 'Noto Sans SC', sans-serif;
+			color: #fff;
+			font-size: 2vh;
+			font-weight: 500;
+			pointer-events: auto;
+			margin: 10px;
+			position: fixed;
+		}
+
+		.loader {
+			width: calc(100% + 100px);
+			overflow-x: hidden;
+			top: -90%;
+			position: absolute;
+			left: -50px;
+		}
+
+		.loader .bar {
+			position: relative;
+			height: 2px;
+			width: 500px;
+			margin: 0 auto;
+			background: #fff;
+			margin-top: 150px;
+		}
+
+		.loader .circle {
+			position: absolute;
+			top: -30px;
+			margin-left: -30px;
+			height: 60px;
+			width: 60px;
+			left: 0;
+			background: #fff;
+			border-radius: 30%;
+			-webkit-animation: move 5s infinite;
+		}
+
+		.loader p {
+			position: absolute;
+			top: -35px;
+			right: -85px;
+			text-transform: uppercase;
+			color: #016d8d;
+			font-family: helvetica, sans-serif;
+			font-weight: bold;
+		}
+
+		@-webkit-keyframes move {
+			0% {
+				left: 0;
+			}
+
+			50% {
+				left: 100%;
+				-webkit-transform: rotate(450deg);
+				width: 150px;
+				height: 150px;
+			}
+
+			75% {
+				left: 100%;
+				-webkit-transform: rotate(450deg);
+				width: 150px;
+				height: 150px;
+			}
+
+			100% {
+				right: 100%;
+			}
+		}
+
+	</style>
+
+</head>
+
+<body>
+	<!--
+	  -- Author: Mashiro
+	  -- Site: https://2heng.xin
+	  -- License: MIT
+	  -->
+
+	<div class="loader-layer" id="loader-layer">
+		<div class="loader" id="loader">
+			<div class="bar">
+				<div class="circle"></div>
+				<p>Loading</p>
+			</div>
+		</div>
+	</div>
+	<header>
+		<div class="level-box-container">
+			<div class="level-box" id="level-box-adapter">
+				<div class="level-logo"></div>
+				<div class="user-level">
+					<div class="level-chart">
+						<div class="chart-bg" id="chart-bg"></div>
+						<div class="chart-pr" id="chart-pr"></div>
+						<div class="level-num" id="level-num">64</div>
+					</div>
+				</div>
+				<div class="user-info">
+					<div class="name">Mashiro</div>
+					<div class="id">ID: 37040126</div>
+				</div>
+			</div>
+		</div>
+	</header>
+	<div class="hide" style="height: 100%;width: 100%; position:absolute;z-index: 5; top: 25%; left: 0%;" id="errortips">
+		<img height="auto" onclick="tipshide()" width="100%" src="./errortips.png">
+	</div>
+	<div id="view-box" class="view-box">
+		<div id="mark" class="mark" data-pointer-events="true">
+			<div id="bg-layer" class="layer" data-depth="0.0">
+				<img id="bg-img" class="cover" src="img/UI_HOME_FRONT_BKG.png">
+			</div>
+			<div id="char-arts-layer" class="layer" data-depth="0.01">
+				<div class="char perspective box"  >
+					<img src="img/amiya_2.png">
+				</div>
+			</div>
+			<div id="left-menu-layer" onclick="voicecilck()" class="layer"  data-depth="0.2">
+				<div class="left menu box">
+					<div class="container" id="left-mune-adapter">
+						<div id="voice" class="top into">
+							<div class="dialog">
+								<span>罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？</span>
+								<audio src="./bg.mp3" loop autoplay></audio>
+								<audio src="./button.wav" id="yinxiao" controls="controls" hidden="true"></audio>
+								<audio src="./amiya.mp3" id="yuyin" controls="controls" hidden="true"></audio>
+
+							</div>
+						</div>
+						<div class="bottom">
+							<div class="left">
+								<div class="activity-img"></div>
+							</div>
+							<div class="right">
+								<div class="pos-1">
+									<div onclick="autoPlay()" class="friends">
+										<div class="icon"></div>
+										<div class="text">好友</div>
+									</div>
+								</div>
+								<div class="pos-2">
+									<div onclick="autoPlay()" class="information">
+										<div class="icon"></div>
+										<div class="text">情报</div>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div id="right-menu-layer" class="layer" data-depth="0.2">
+				<div class="right menu box">
+					<div class="popup" id="right-mune-popup-adapter"></div>
+					<div class="container" id="right-mune-adapter">
+						<div class="pos-1">
+							<div class="top">
+								<div class="line-left"></div>
+								<div class="battery"></div>
+								<div class="time" id="time"><script>document.write(myDate.getFullYear());</script>/<script>document.write(myDate.getMonth());</script>/<script>document.write(myDate.getDate());</script> <script>document.write(myDate.getTime());</script></div>
+								<div class="line-right"></div>
+							</div>
+							<div class="bottom">
+								<div class="bg"></div>
+								<div class="status">
+									<div class="item money">
+										<div class="icon"></div>
+										<div class="amount">1000</div>
+									</div>
+									<div class="item jasper">
+										<div class="icon"></div>
+										<div class="amount">1000</div>
+										<div class="more"></div>
+									</div>
+									<div class="item stone">
+										<div class="icon"></div>
+										<div class="amount">1000</div>
+										<div class="more"></div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pos-2">
+							<div class="intellect">
+								<div class="icon"></div>
+								<div class="content">
+									<div onclick="autoPlay()" class="figure">
+										<div class="value">125</div>
+										<div class="total">/125</div>
+									</div>
+									<div onclick="autoPlay()" class="battle">
+										<div class="text">作战</div>
+										<div class="current">当前</div>
+										<div class="level">5-10 长夜终尽</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pos-3">
+							<div onclick="autoPlay()" class="team">
+								<div class="icon"></div>
+								<div class="text">编队</div>
+							</div>
+							<div onclick="autoPlay()" class="member">
+								<div class="icon"></div>
+								<div class="text">干员</div>
+								<div class="desc">角色管理</div>
+							</div>
+							<div class="blank"></div>
+						</div>
+						<div class="pos-4">
+							<div onclick="autoPlay()" class="shop">
+								<div class="icon"></div>
+								<div class="text">采购中心</div>
+							</div>
+							<div class="gamble">
+								<div onclick="autoPlay()" class="top">
+									<div class="icon"></div>
+									<div class="text">招募</div>
+								</div>
+								<div  class="bottom">
+									<div onclick="autoPlay()" class="left">
+										<div class="icon"></div>
+										<div class="text">公开招募</div>
+									</div>
+									<div onclick="autoPlay()" class="right">
+										<div class="icon"></div>
+										<div class="text">干员寻访</div>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="pos-5">
+							<div onclick="autoPlay()" class="task">
+								<div class="icon"></div>
+								<div class="text">任务</div>
+							</div>
+							<div onclick="autoPlay()" class="infrastructure">
+								<div class="icon"></div>
+								<div class="text">基建</div>
+								<div class="beta"></div>
+							</div>
+							<div onclick="autoPlay()" class="warehouse">
+								<div class="icon"></div>
+								<div class="text">仓库</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			<canvas id="canvas-dust"></canvas>
+		</div>
+	</div>
+
+	<script>
+		/* loader */
+		(function() {
+			document.querySelector('#loader').setAttribute('style', 'transform: scale(' + Math.max(window.innerHeight, window.innerWidth) / 1366 + ') translateY(-50%); top: 60%; transform-origin: top center;');
+		})();
+
+	</script>
+
+	<script src="js/src/arknights.js"></script>
+	<script src="js/src/jquery.3.3.1.min.js?v=1.0"></script>
+	<script src="js/src/jquery.pjax.js?v=1.0"></script>
+	<script src="js/src/GYST.js?v=1.0"></script>
+	<script src="js/src/parallax.3.1.0.min.js?v=1.0"></script>
+	<script src="js/scripts.js?v=1.1"></script>
+</body>
+
+</html>
