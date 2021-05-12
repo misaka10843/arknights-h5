@@ -19,7 +19,7 @@
 在此非常感谢@mashirozx开源的主页面qwq<br>
 下面是原readme.md<br>
 （本仓库一样是使用的MIT开源协议qwq）<br>
-感谢您的支持！
+感谢您的支持！<br>
 ![统计](https://count.getloli.com/get/@misaka10843?theme=elbooru)
 <br>
 <br><br>
