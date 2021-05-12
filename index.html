@@ -38,25 +38,28 @@
             myAuto.play();
 			tipsshow();
         }
+
 		function tipsshow(){
 			$('#errortips').removeClass("hide").addClass('show');
 		}
+
 		function tipshide(){
 			$('#errortips').removeClass("show").addClass('hide');
 			var myAuto = document.getElementById('yinxiao');
             myAuto.play();
 		}
-		var i = 0;
+		var i = 1;
 function voicecilck(){
-        if (i == 0){
+	
+        if (i == 1){
+			
              $('#voice').removeClass("hide inout").addClass('into');
-            i = 1;
-			var myAuto = document.getElementById('yuyin');
-            myAuto.play();
+			 
+            i = 0;
         }else{
             setTimeout('update()',500);
-            i = 0;
-            $('#voice').removeClass("into hide").addClass('inout')
+            $('#voice').removeClass("into hide").addClass('inout');
+			i = 1;
         }
         
 
@@ -65,6 +68,30 @@ function voicecilck(){
         $('#voice').removeClass("inout into").addClass('hide')
     }
 
+	function vocietext(){
+	if (i == 0){
+		var a = Math.floor(Math.random() * 3);
+		if( a == 0){
+			document.getElementById('yuyin').src = "./voice/amiya-2.mp3";
+			
+			document.getElementById('vocietext').innerHTML = "罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？";
+			var myAuto = document.getElementById('yuyin');
+            myAuto.play();
+		}else if( a == 1){
+			document.getElementById('yuyin').src = "./voice/amiya-1.mp3";
+			document.getElementById('vocietext').innerHTML = "凯尔希医生教导过我，工作的时候一定要保持全神贯注......嗯，全神贯注。";
+			var myAuto = document.getElementById('yuyin');
+            myAuto.play();
+		}else if(a == 2){
+			document.getElementById('yuyin').src = "./voice/amiya-3.mp3";
+			document.getElementById('vocietext').innerHTML = "作为罗德岛的领导者我还有很多不成熟的地方，希望您能更多地为我指明前进的方向。";
+			var myAuto = document.getElementById('yuyin');
+            myAuto.play();
+		}
+	}
+	}
+
+	
 	</script>
 
 	<style>
@@ -203,15 +230,15 @@ function voicecilck(){
 					<img src="./img/amiya_2.png">
 				</div>
 			</div>
-			<div id="left-menu-layer" onclick="voicecilck()" class="layer"  data-depth="0.2">
+			<div id="left-menu-layer" onclick="voicecilck();vocietext();" class="layer"  data-depth="0.2">
 				<div class="left menu box">
 					<div class="container" id="left-mune-adapter">
 						<div id="voice" class="top into">
 							<div class="dialog">
-								<span>罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？</span>
+								<span><p id="vocietext">罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？</p></span>
 								<audio src="./voice/bg.mp3" loop autoplay></audio>
 								<audio src="./voice/button.wav" id="yinxiao" controls="controls" hidden="true"></audio>
-								<audio src="./voice/amiya.mp3" id="yuyin" controls="controls" hidden="true"></audio>
+								<audio src="./voice/amiya-2.mp3" id="yuyin" controls="controls" hidden="true"></audio>
 
 							</div>
 						</div>
