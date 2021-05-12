@@ -1,11 +1,12 @@
 # arknights-h5
-明日方舟UI H5复刻界面，基于@mashirozx的arknights-u iArknights UI：H5 + CSS 复刻明日方舟主界面修改
+明日方舟UI H5复刻界面，基于@mashirozx的arknights-u iArknights UI：H5 + CSS 复刻明日方舟主界面修改<br>
+[原仓库链接](https://github.com/mashirozx/arknights-ui/)
 
 ## 修改内容
-大致修改了加载界面，添加了按钮点击音效，
-语音框淡出淡入，添加语音
-修改立绘为阿米娅精二
-添加按钮点击后显示“功能正在制作 错误号-0”的弹窗
+大致修改了加载界面，添加了按钮点击音效，<br>
+语音框淡出淡入，添加语音<br>
+修改立绘为阿米娅精二<br>
+添加按钮点击后显示“功能正在制作 错误号-0”的弹窗<br>
 
 ## 后续计划：
 - [x] 添加语音
@@ -15,13 +16,13 @@
 - [ ] 一些杂七杂八的功能
 
 ## 后言
-在此非常感谢@mashirozx开源的主页面qwq
-下面是原readme.md
-（本仓库一样是使用的MIT开源协议qwq）
-
-
-
-
+在此非常感谢@mashirozx开源的主页面qwq<br>
+下面是原readme.md<br>
+（本仓库一样是使用的MIT开源协议qwq）<br>
+<br>
+<br><br>
+<br>
+<br>
 # Arknights UI：H5 + CSS 复刻明日方舟主界面
 ![screenshot](screenshot.png)
 
