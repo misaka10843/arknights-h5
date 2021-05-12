@@ -10,6 +10,7 @@
 
 ## 后续计划︿(￣︶￣)︿：
 - [x] 添加语音
+- [x] 语音轮播
 - [ ] 增加常用界面
 - [ ] 重构加载页面
 - [ ] 自定义立绘
@@ -20,6 +21,8 @@
 下面是原readme.md<br>
 （本仓库一样是使用的MIT开源协议qwq）<br>
 感谢您的支持！<br>
+
+#### readme统计
 ![统计](https://count.getloli.com/get/@misaka10843?theme=elbooru)
 <br>
 <br><br>
