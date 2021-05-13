@@ -24,6 +24,10 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100439904-7"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 	<script>
+		var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+			if (is_chrome) { 
+				alert("因为检测到您的浏览器是Chrome内核，所以BGM无法自动播放,还请加载完之后任何一个按钮来播放BGM");	
+			} 
 		window.dataLayer = window.dataLayer || [];
 
 		function gtag() {
@@ -36,11 +40,14 @@
 		function autoPlay() {
             var myAuto = document.getElementById('yinxiao');
             myAuto.play();
+			var bgmplay = document.getElementById('bgm');
+			bgmplay.play();
 			tipsshow();
         }
 
 		function tipsshow(){
 			$('#errortips').removeClass("hide").addClass('show');
+			
 		}
 
 		function tipshide(){
@@ -236,7 +243,7 @@ function voicecilck(){
 						<div id="voice" class="top into">
 							<div class="dialog">
 								<span><p id="vocietext">罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？</p></span>
-								<audio src="./voice/bg.mp3" loop autoplay></audio>
+								<audio src="./voice/bg.mp3" id="bgm" controls="controls" hidden="true" class=""></audio>
 								<audio src="./voice/button.wav" id="yinxiao" controls="controls" hidden="true"></audio>
 								<audio src="./voice/amiya-2.mp3" id="yuyin" controls="controls" hidden="true"></audio>
 
