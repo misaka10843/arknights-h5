@@ -24,6 +24,14 @@
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100439904-7"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
 	<script>
+function chrome(){
+		var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
+			if (is_chrome) { 
+				$('#chromeerrortips').removeClass("hide").addClass('show');
+				var myAuto = document.getElementById('error');
+            	myAuto.play();
+			}
+		}
 		window.dataLayer = window.dataLayer || [];
 
 		function gtag() {
@@ -41,12 +49,27 @@
 
 		function tipsshow(){
 			$('#errortips').removeClass("hide").addClass('show');
+			var myAuto = document.getElementById('error');
+            myAuto.play();
+			
 		}
 
 		function tipshide(){
 			$('#errortips').removeClass("show").addClass('hide');
 			var myAuto = document.getElementById('yinxiao');
             myAuto.play();
+		}
+
+			function chrometipsshow(){
+				$('#chromeerrortips').removeClass("hide").addClass('show');
+			}
+			
+		function chrometipshide(){
+			$('#chromeerrortips').removeClass("show").addClass('hide');
+			var myAuto = document.getElementById('yinxiao');
+		    myAuto.play();
+			var bgmplay = document.getElementById('bgm');
+			bgmplay.play();
 		}
 		var i = 1;
 function voicecilck(){
@@ -184,13 +207,16 @@ function voicecilck(){
 
 </head>
 
-<body>
+<body onload="chrome()">
 	<!--
 	  -- Author: Mashiro
 	  -- Site: https://2heng.xin
 	  -- License: MIT
 	  -->
-	  <audio src="./voice/bg.mp3" loop autoplay></audio>
+	<audio src="./voice/bg.mp3" id="bgm" controls="controls" hidden="true" loop autoplay></audio>
+	<audio src="./voice/button.wav" id="yinxiao" controls="controls" hidden="true"></audio>
+	<audio src="./voice/amiya-2.mp3" id="yuyin" controls="controls" hidden="true"></audio>
+	<audio src="./voice/ui_error.wav" id="error" controls="controls" hidden="true"></audio>
 	<div class="loader-layer" id="loader-layer">
 		<div class="loader" id="loader">
 			<div class="bar">
@@ -199,7 +225,7 @@ function voicecilck(){
 			</div>
 		</div>
 	</div>
-	<header><iframe allow="autoplay" src="./bgm.html" width="0px" height="0px"></iframe>
+	<header>
 		<div class="level-box-container">
 			<div class="level-box" id="level-box-adapter">
 				<div class="level-logo"></div>
@@ -220,6 +246,9 @@ function voicecilck(){
 	<div class="hide" style="height: 100%;width: 100%; position:absolute;z-index: 5; top: 25%; left: 0%;" id="errortips">
 		<img height="auto" onclick="tipshide()" width="100%" src="./img/errortips.png">
 	</div>
+	<div class="hide" style="height: 100%;width: 100%; position:absolute;z-index: 5; top: 25%; left: 0%;" id="chromeerrortips">
+		<img height="auto" onclick="chrometipshide()" width="100%" src="./img/chromeerrortips.png">
+	</div>
 	<div id="view-box" class="view-box">
 		<div id="mark" class="mark" data-pointer-events="true">
 			<div id="bg-layer" class="layer" data-depth="0.0">
@@ -236,9 +265,6 @@ function voicecilck(){
 						<div id="voice" class="top into">
 							<div class="dialog">
 								<span><p id="vocietext">罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？</p></span>
-								<audio src="./voice/button.wav" id="yinxiao" controls="controls" hidden="true"></audio>
-								<audio src="./voice/amiya-2.mp3" id="yuyin" controls="controls" hidden="true"></audio>
-
 							</div>
 						</div>
 						<div class="bottom">
