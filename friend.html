@@ -4,7 +4,7 @@
 	}
 
     .friend {
-			background: url(.1/Screenshot_20210512-151252.png) no-repeat center center fixed;
+			background: url(./Screenshot_20210512-151252.png) no-repeat center center fixed;
 			background-size: 100% 100% ;
 			position: fixed;
 			top: 0;
@@ -42,14 +42,12 @@
 	}
 
 	.topui-right{
+		left: 50%;
 		width: 50%;
 		height: 10%;
-		transform: translateY(-50%);
-		font-size: 20px;
-	}
-
-	.topui-right .aboutme{
-
+		transform: translateY(-65%);
+		font-size: 30px;
+		position: absolute;
 	}
 
 	.topui-right .aboutme{
@@ -57,19 +55,26 @@
 	}
 
 	.topui-right .aboutme .text{
-
+		transform: translateX(27%);
+		width: 45%;
+		height: auto;
+		position: absolute;
 	}
 
 	.topui-right .aboutme .name{
-
+		transform: translate(50%,10%);
+		top: 100%;
+		position: relative;
 	}
 
 	.topui-right .aboutme .level{
-		
+		transform: translate(70%,-130%);
+		width: 50%;
+		height: 50%;
 	}
 
 	.topui-right .aboutme .level .img{
-
+		width: 21%;
 	}
 
 	.topui-right .aboutme .level .text{
@@ -77,7 +82,8 @@
 	}
 
 	.maincard{
-		background: #016d8d url(./img/personal-data/ui.png) no-repeat center center fixed;
+		background:url(./img/personal-data/ui.png) no-repeat center center;
+		position: absolute;
 	}
 </style>
 <body>
@@ -95,9 +101,9 @@
 				</div>
 			</div>
 		</div>
-		<div class="topui-right"
+		<div class="topui-right">
 			<div class="aboutme">
-				<div class="text">我的信息|</div>
+				<div class="text">我的信息&nbsp;&nbsp;|</div>
 				<div class="name">御坂10843号</div>
 				<div class="level">
 					<img class="img" src="./img/personal-data/ui_level.png">
