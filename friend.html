@@ -1,10 +1,13 @@
 <style>
-	body{
+	.friend{
 		color: white;
+		background: rgb(95, 194, 3);
 	}
-
+	ul,li{
+		list-style: none;
+	}
     .friend {
-			background: url(./Screenshot_20210512-151252.png) no-repeat center center fixed;
+			background: url(.1/Screenshot_20210512-151252.png) no-repeat center center fixed;
 			background-size: 100% 100% ;
 			position: fixed;
 			top: 0;
@@ -38,7 +41,7 @@
 	.topui-left .button .tips{
 		position: absolute;
 
-	transform: translateX(870%);
+	transform: translateX(850%);
 	}
 
 	.topui-right{
@@ -46,7 +49,7 @@
 		width: 50%;
 		height: 10%;
 		transform: translateY(-65%);
-		font-size: 30px;
+		font-size: 180%;
 		position: absolute;
 	}
 
@@ -75,15 +78,39 @@
 
 	.topui-right .aboutme .level .img{
 		width: 21%;
+		height: auto;
 	}
 
 	.topui-right .aboutme .level .text{
+		width: 10%;
+		height: auto;
+		transform: translate(55%,-200%);
+	}
+	
+	.centerui-left{
+		transform:translateX(-1.5%);
+	}
 
+	.centerui-left img{
+		margin-top:0.5%;
+		width: 16%;
+		height: 11%;
 	}
 
 	.maincard{
-		background:url(./img/personal-data/ui.png) no-repeat center center;
+		background-size: 100% 74%;
 		position: absolute;
+		transform: translateX(26%);
+		top: 2%;
+		width: 75%;
+		height: 154%;
+	}
+
+	.maincard .bgimg img{
+		transform: translate(-2%,14%);
+		z-index: -1;
+		width: 100%;
+		height: 50%;
 	}
 </style>
 <body>
@@ -110,6 +137,8 @@
 					<p class="text">64</p>
 				</div>
 			</div>
+		</div>
+		<div class="centerui-left">
 			<div class="list">
 				<ul>
 					<li><img src="./img/personal-data/ui_personaldata.png"></li>
@@ -118,14 +147,20 @@
 					<li><img src="./img/personal-data/ui_zhiyuan.png"></li>
 				</ul>
 			</div>
+		</div>
+		<div class="centerui-right">
 			<div class="maincard">
 				<div class="ruzhi">
+					<div class="bgimg">
+						<img src="/img/personal-data/ui.png">
+					</div>
 					<div class="text">
 						<p style="color: black;">入职日</p>
 					</div>
 					<div class="date">
 						<p style="color: black;">2019-5-25</p>
 					</div>
+					
 				</div>
 			</div>
 		</div>
