@@ -28,6 +28,8 @@ function chrome(){
 		var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
 			if (is_chrome) { 
 				$('#chromeerrortips').removeClass("hide").addClass('show');
+				var myAuto = document.getElementById('error');
+            	myAuto.play();
 			}
 		}
 		window.dataLayer = window.dataLayer || [];
@@ -47,6 +49,8 @@ function chrome(){
 
 		function tipsshow(){
 			$('#errortips').removeClass("hide").addClass('show');
+			var myAuto = document.getElementById('error');
+            myAuto.play();
 			
 		}
 
@@ -209,7 +213,10 @@ function voicecilck(){
 	  -- Site: https://2heng.xin
 	  -- License: MIT
 	  -->
-
+	<audio src="./voice/bg.mp3" id="bgm" controls="controls" hidden="true" loop autoplay></audio>
+	<audio src="./voice/button.wav" id="yinxiao" controls="controls" hidden="true"></audio>
+	<audio src="./voice/amiya-2.mp3" id="yuyin" controls="controls" hidden="true"></audio>
+	<audio src="./voice/ui_error.wav" id="error" controls="controls" hidden="true"></audio>
 	<div class="loader-layer" id="loader-layer">
 		<div class="loader" id="loader">
 			<div class="bar">
@@ -258,10 +265,6 @@ function voicecilck(){
 						<div id="voice" class="top into">
 							<div class="dialog">
 								<span><p id="vocietext">罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？</p></span>
-								<audio src="./voice/bg.mp3" id="bgm" controls="controls" hidden="true" loop autoplay></audio>
-								<audio src="./voice/button.wav" id="yinxiao" controls="controls" hidden="true"></audio>
-								<audio src="./voice/amiya-2.mp3" id="yuyin" controls="controls" hidden="true"></audio>
-
 							</div>
 						</div>
 						<div class="bottom">
