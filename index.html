@@ -24,6 +24,7 @@
 	<!-- Global site tag (gtag.js) - Google Analytics -->
 	<script async src="https://www.googletagmanager.com/gtag/js?id=UA-100439904-7"></script>
 	<script type="text/javascript" src="https://cdn.bootcss.com/jquery/1.11.2/jquery.min.js"></script>
+	<script type="text/javascript" src="./js/voice.js"></script>
 	<script>
 function chrome(){
 		var is_chrome = navigator.userAgent.toLowerCase().indexOf('chrome') > -1;
@@ -103,29 +104,6 @@ function voicecilck(){
     function update(){
         $('#voice').removeClass("inout into").addClass('hide')
     }
-
-	function vocietext(){
-	if (i == 0){
-		var a = Math.floor(Math.random() * 3);
-		if( a == 0){
-			document.getElementById('yuyin').src = "./voice/amiya-2.mp3";
-			
-			document.getElementById('vocietext').innerHTML = "罗德岛全舰正处于通常航行状态。博士，整理下航程信息吧？";
-			var myAuto = document.getElementById('yuyin');
-            myAuto.play();
-		}else if( a == 1){
-			document.getElementById('yuyin').src = "./voice/amiya-1.mp3";
-			document.getElementById('vocietext').innerHTML = "凯尔希医生教导过我，工作的时候一定要保持全神贯注......嗯，全神贯注。";
-			var myAuto = document.getElementById('yuyin');
-            myAuto.play();
-		}else if(a == 2){
-			document.getElementById('yuyin').src = "./voice/amiya-3.mp3";
-			document.getElementById('vocietext').innerHTML = "作为罗德岛的领导者我还有很多不成熟的地方，希望您能更多地为我指明前进的方向。";
-			var myAuto = document.getElementById('yuyin');
-            myAuto.play();
-		}
-	}
-	}
 
 	
 	</script>
