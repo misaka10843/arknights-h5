@@ -38,7 +38,7 @@ function vocietext(){
             myAuto.play();
 		}else if(a == 7){
 			document.getElementById('yuyin').src = "./voice/amiya-8.wav";
-			document.getElementById('vocietext').innerHTML = "嘿嘿，博士，悄悄告诉你一件事——我重新开始练小提琴了。";
+			document.getElementById('vocietext').innerHTML = "ふふ…実は私、またヴァイオリンの練習をし始めたんです。今度のパーティーでみなさんにサプライズを……だからドクター、みなさんには内緒ですよ……？";
 			var myAuto = document.getElementById('yuyin');
             myAuto.play();
 		}else if(a == 8){
