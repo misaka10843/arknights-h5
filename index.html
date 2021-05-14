@@ -85,25 +85,6 @@ function chrome(){
 			var bgmplay = document.getElementById('bgm');
 			bgmplay.play();
 		}
-		var i = 1;
-function voicecilck(){
-	
-        if (i == 1){
-			
-             $('#voice').removeClass("hide inout").addClass('into');
-			 
-            i = 0;
-        }else{
-            setTimeout('update()',500);
-            $('#voice').removeClass("into hide").addClass('inout');
-			i = 1;
-        }
-        
-
-    }
-    function update(){
-        $('#voice').removeClass("inout into").addClass('hide')
-    }
 
 	
 	</script>

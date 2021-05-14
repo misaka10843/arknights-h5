@@ -1,3 +1,27 @@
+//语音框淡出淡入
+var i = 1;
+function voicecilck(){
+	
+        if (i == 1){
+			
+             $('#voice').removeClass("hide inout").addClass('into');
+			 
+            i = 0;
+        }else{
+            setTimeout('voicehide()',500);
+            $('#voice').removeClass("into hide").addClass('inout');
+			i = 1;
+        }
+        
+
+    }
+    function voicehide(){
+        $('#voice').removeClass("inout into").addClass('hide')
+    }
+
+
+
+//语音文本及文件输出至相对应位置
 function vocietext(){
 	if (i == 0){
 		var a = Math.floor(Math.random() * 9);
