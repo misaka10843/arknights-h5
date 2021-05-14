@@ -23,7 +23,7 @@
 #### 检测到为chrome内核的提示
 ![chrome](./yulan/chromeerror.png)
 #### 好友页面(未完成)
-![好友](./yulan/mainpage.png)
+![好友](./yulan/friend.png)
 
 
 ## 注意！
